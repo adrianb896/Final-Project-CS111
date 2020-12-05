@@ -1,0 +1,6 @@
+[S o u r c e s]: 
+https://www.formula1.com/en/results.html
+https://www.f1-fansite.com/f1-drivers/2020-f1-drivers-overview/
+http://www.espn.com/racing/standings/_/series/f1
+[P r o j e c t - P r o p o s a l]:
+In my final project, the data I plan to work with will involve Formula 1 2020 Driver Standings that has to deal with a total of 21 drivers. The summary analyses I plan to perfom will be mainly focusing on the Grand Prix races won by specific teams during the 2020 season at several locations as the season continues. Since races are going on right now, I also plan on implementing updated data that will be supported by the drivers postion they are currently in and the total amount of points they have. These type of queries will help me to compare points that have to deal with what Formula 1 team has the most amount of points and what team has the least amount of points. As well as looking at the average amount of points being won by the overall spectrum of the 10 teams. I also plan to support my data of the 21 drivers with another query that the user will be given the option to look at if they desire to. This query will involve who has had the fastest lap at each of the race that has been raced so far. A total of 15 races have happened so this will help to also locate the slowest lap and the fastest lap so far in the Formula 1 2020 season.
