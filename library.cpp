@@ -6,7 +6,7 @@ using namespace std;
 
 //display a drivers data
 void display_one_driver(Driver d) {
-  cout << "\nDrivers position is " << d.position << ", " << "his name is " << d.name << ", " << "they are on team " << d.team << ", " << "with an overall points of " << d.points << endl;
+  cout << "\nDrivers position is " << d.position << ", " << "his name is " << d.name << ", " << "he is from " << d.country << ", " << "he is on team " << d.team << ", " << "with an overall points of " << d.points << endl;
 }
 
 //collect all of the drivers datas
@@ -25,6 +25,7 @@ void collect_one_driver(ifstream& input, Driver& d) {
   input >> d.position;
   input.ignore();
   getline(input, d.name, ',');
+  getline(input, d.country, ',');
   getline(input, d.team, ',');
   input >> d.points;
 }
@@ -72,8 +73,8 @@ void insert_driver(Driver arr[], int& d, Driver dr) {
   for (int i = d; i > dr.position; i--)
     arr[i] = arr[i - 1];
     arr[dr.position] = dr;
-  d++;
-  cout << "\nDrivers position is " << dr.position << ", " << "his name is " << dr.name << ", " << "they are on team " << dr.team << ", " << "with an overall points of " << dr.points << endl;
+    d++;
+  cout << "\nDrivers position is " << dr.position << ", " << "his name is " << dr.name << ", " << "he is from " << dr.country << ", " << "he is on team " << dr.team << ", " << "with an overall points of " << dr.points << endl;
 } //end of for
 
 //return data for the highest points collected
