@@ -25,26 +25,27 @@ int main() {
 
   int column_width = 20;
     cout << fixed << showpoint << setprecision(1);
-    cout << "Place" << setw(17) << "Drivers" << setw(17) << "Team" << setw(22) << "Points" << endl;
+    cout << "Place" << setw(17) << "Drivers" << setw(22) << "Country" << setw(17) << "Team" << setw(22) << "Points" << endl;
 
   while(!input.eof()) {
     collect_one_driver(input, one_driver);
     cout << left << setw(15) << one_driver.position;
-    cout << left << setw(column_width) << one_driver.name;
+    cout << left << setw(22) << one_driver.name;
+    cout << left << setw(column_width) << one_driver.country;
     cout << left << setw(column_width) << one_driver.team;
     cout << left << setw(column_width) << one_driver.points << endl;
   } //end of while
   input.close(); //closing the file grab
 
-    //options to choose from
+  //options to choose from
     cout << "\nOption Menu: \n";
     cout << "\n1. Display a driver's data\n" << endl;
     cout << "2. Display every driver\n" << endl;
     cout << "3. Erase a driver by his name\n" << endl;
     cout << "4. Add a new driver by desired name\n" << endl;
-    cout << "5. Show who has the highest points\n" << endl;
-    cout << "6. Show who has the lowest points\n" << endl;
-    cout << "7. Show the average amount of points\n" << endl;
+    cout << "5. Display who has the highest points\n" << endl;
+    cout << "6. Display who has the lowest points\n" << endl;
+    cout << "7. Display the average amount of points\n" << endl;
     cout << "8. Exit the program.\n" << endl;
     cout << "Please select from the Option Menu 1 - 8: " << endl;
     cin >> option;
@@ -81,6 +82,8 @@ int main() {
       cin.ignore();
       cout << "Add the desired name to our list: \n";
       getline(cin, one_driver.name);
+      cout << "What country is this player from: \n";
+      getline(cin, one_driver.country);
       cout << "What team is this player on: \n";
       getline(cin, one_driver.team);
       cout << "How many points would you want: \n";
