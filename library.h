@@ -6,6 +6,7 @@ using namespace std;
 struct Driver {
   int position;
   string name;
+  string country;
   string team;
   double points;
 };
